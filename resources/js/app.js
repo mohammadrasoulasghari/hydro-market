@@ -1,4 +1,5 @@
 import './bootstrap';
+import '../css/form-create.css';
 import '../css/bootstrap.min.css';
 import '../css/owl.carousel.min.css';
 import '../css/animate.min.css';
@@ -12,4 +13,8 @@ import './bootstrap.min';
 import './owl.carousel.min';
 import './main.js';
 
+import Alpine from 'alpinejs';
 
+window.Alpine = Alpine;
+
+Alpine.start();
