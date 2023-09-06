@@ -14,7 +14,7 @@ class BrandController extends Controller
     }
     public function create()
     {
-        return View('create-brand');
+        return View('brands.create-brand');
     }
     public function store(Request $request)
     {
@@ -22,6 +22,24 @@ class BrandController extends Controller
             'name' => $request->name,
             'picture_url' => $request->picture_url,
         ]);
-        return redirect(route('brands.index'))->with('alert',__('message.success_brand'));
+        return redirect(route('brands.index'))->with('alert','برند شما با موفقیت افزوده شد');
+    }
+
+    public function edit(Brand $brands)
+    {
+
+        return View('brands.edit-brand',compact('brands'));
+    }
+
+    public function update(Request $request,Brand $brands){
+        $brands->update($request->all());
+        return redirect()->route('brands.index')->with('alert',__('message.video_edited'));
+    }
+    public function brandList()
+    {
+        $brands=Brand::all();
+        
+    return view('brands.brands-list',compact("brands"));
+        
     }
 }

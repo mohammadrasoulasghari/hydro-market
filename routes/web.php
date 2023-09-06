@@ -17,8 +17,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[BrandController::class,'index'], )->name('brands.index');
+//create brands
 Route::get('/create/brand',[BrandController::class,'create'], )->name('brands.create');
 Route::post('/brands',[BrandController::class,'store'], )->name('brands.store');
+//edit brands
+Route::get('/edit/{brands}/brand',[BrandController::class,'edit'], )->name('brands.edit');
+Route::post('/edit/{brands}',[BrandController::class,'update'], )->name('brands.update');
+
+Route::get('brands/show',[BrandController::class,'brandList']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

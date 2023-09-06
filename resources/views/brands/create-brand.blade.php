@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فرم ورود اطلاعات</title>
+    <title>ساخت یک برند جدید </title>
     @vite('resources/js/app.js')
 </head>
 <body>
     <div class="container-form">
-        <h2>وارد کردن اطلاعات</h2>
+        <h2>ساخت یک برند جدید </h2>
         <form action="{{ route('brands.store') }}" method="POST"> <!-- اکشن فرم به فایل پردازشی خود تغییر دهید -->
                  @csrf
             <div class="form-group-form">
