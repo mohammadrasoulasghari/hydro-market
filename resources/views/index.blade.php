@@ -69,7 +69,8 @@
                             </ul>
                         </div> <!-- section title -->
                     </div>
-                </div> <!-- row -->
+                </div>
+                 <!-- row -->
 
                  <x-brands :brands="$brands">
 
