@@ -26,6 +26,9 @@ Route::post('/edit/{brands}',[BrandController::class,'update'], )->name('brands.
 
 Route::get('brands/show',[BrandController::class,'brandList']);
 
+Route::get('f',function(){
+   return view('panel-admin.panel-admin');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -1,5 +1,6 @@
 import './bootstrap';
 import '../css/form-create.css';
+import '../css/style-admin.css';
 import '../css/bootstrap.min.css';
 import '../css/owl.carousel.min.css';
 import '../css/animate.min.css';
