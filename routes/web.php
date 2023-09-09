@@ -27,7 +27,7 @@ Route::get('/delete/{brands}', [BrandController::class, 'delete'],)->name('brand
 
 Route::get('brands/show', [BrandController::class, 'brandList']);
 Route::get('b', function () {
-    return view('test');
+    return view('blog-details');
 });
 
 
