@@ -3,6 +3,7 @@
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Brand;
+use App\View\Components\brands;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,10 +28,11 @@ Route::get('/delete/{brands}', [BrandController::class, 'delete'],)->name('brand
 
 Route::get('brands/show', [BrandController::class, 'brandList']);
 Route::get('b', function () {
+    
     return view('blog-details');
 });
 
-
+Route::get('{brand}', [BrandController::class, 'brandDetails'])->name('brand.details');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

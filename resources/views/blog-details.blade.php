@@ -262,26 +262,28 @@
             <div class="container">
                 <div class="blog-grid-wrap">
                     <div class="row">
+                        @foreach ($details as $detail)
+                            
+                        
                         <div class="col-xl-4 col-md-6">
-                            <!-- Single Blog Start -->
                             <div class="single-blog">
                                 <div class="blog-img">
-                                    <a href="blog-details.html"><img src="assets/images/blog/blog-1.jpg" alt=""></a>
+                                    <a href="{{ $detail->forward_url }}"><img src="{{ $detail->picture_url }}" alt=""></a>
                                 </div>
-                                <div class="blog-content">
+                            <div class="blog-tent">
                                     <div class="blog-meta">
                                         <span class="date"><span>08</span>مهر</span>
                                     </div>
-                                    <h3 class="title"><a href="blog-details.html">چه کسی به استخراج ارزش از داده ها نیاز دارد ارائه بهترین آژانس طراحی وب سایت.</a></h3>
+                                    <h3 class="title"><a href="{{ $detail->forward_url }}">{{ $detail->name }}</a></h3>
                                 </div>
                                 <div class="blog-btn">
-                                    <a class="link-btn" href="blog-details.html">بیشتر بخوانید <span class="link-icon"><img src="assets/images/btn-icon.png" alt=""></span></a>
+                                    <a class="link-btn" href="{{ $detail->forward_url }}">بیشتر بخوانید <span class="link-icon"><img src="assets/images/btn-icon.png" alt=""></span></a>
                                 </div>
                             </div>
                             <!-- Single Blog End -->
                         </div>
 
-                        
+                        @endforeach
                     </div>
                  
                 </div>

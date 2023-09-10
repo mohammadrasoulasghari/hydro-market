@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\detail;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -52,5 +53,10 @@ class BrandController extends Controller
     {
         $brand = Brand::find($brands->id);
         $brand->delete();
+    }
+
+    public function brandDetails(Brand $brand){
+        $details=detail::where('brand_id', $brand->id)->get();
+        return view('blog-details', compact('details'));
     }
 }
