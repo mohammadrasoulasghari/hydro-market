@@ -31,6 +31,7 @@ class BrandController extends Controller
         ]);
         return redirect(route('brands.index'))->with('alert', 'برند شما با موفقیت افزوده شد');
     }
+   
 
     public function edit(Brand $brands)
     {
@@ -49,14 +50,15 @@ class BrandController extends Controller
 
         return view('brands.brands-list', compact("brands"));
     }
+    public function brandDescription(Brand $brand){
+        $details=detail::where('brand_id', $brand->id)->get();
+        return view('blog-details', compact('details'));
+    }
     public function delete(Brand $brands)
     {
         $brand = Brand::find($brands->id);
         $brand->delete();
     }
-
-    public function brandDetails(Brand $brand){
-        $details=detail::where('brand_id', $brand->id)->get();
-        return view('blog-details', compact('details'));
-    }
+   
+   
 }

@@ -1,10 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Brand;
-use App\View\Components\brands;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,22 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('show/{brand}', [BrandController::class, 'brandDescription'])->name('brand.detail');
 Route::get('/', [BrandController::class, 'index'])->name('brands.index');
-//create brands
 
-//edit brands
 Route::get('/edit/{brands}/brand', [BrandController::class, 'edit'],)->name('brands.edit');
 Route::post('/edit/{brands}', [BrandController::class, 'update'],)->name('brands.update');
 
 Route::get('/delete/{brands}', [BrandController::class, 'delete'],)->name('brands.delete');
 
 Route::get('brands/show', [BrandController::class, 'brandList']);
-Route::get('b', function () {
-    
-    return view('blog-details');
-});
+// Route::get('bass', function () {
+//      Log::info('Brands');
+//     // return view('blog-details');
+// });
 
-Route::get('{brand}', [BrandController::class, 'brandDetails'])->name('brand.details');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -48,3 +45,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+
+

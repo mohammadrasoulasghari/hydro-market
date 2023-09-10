@@ -13,17 +13,17 @@
     <!-- CSS
 	============================================ -->
 
-    <link rel="stylesheet" href="assets/css/plugins/all.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/flaticon.css') }}">
 
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/aos.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnific-popup.css') }}">
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style-corpix.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-corpix.css') }}">
 
 
 
@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="assets/css/style.min.css"> -->
 
 </head>
-@yield('section')
 
 
 
