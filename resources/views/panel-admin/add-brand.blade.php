@@ -563,7 +563,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group mb-0">
                                                     <div class="form-line">
-                                                        <textarea rows="4" name="picture_url" class="form-control no-resize" placeholder="آدرس عکس برند"></textarea><!-https: //t.me/sabzrea ->
+                                                        <textarea rows="4" name="picture_url" class="form-control no-resize" placeholder="آدرس عکس برند"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

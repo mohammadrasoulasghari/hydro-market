@@ -20,7 +20,8 @@ class BrandController extends Controller
         return View('panel-admin.panel', compact('brands'));
     }
     public function showcreate()
-    { $brands = Brand::all();
+    {
+        $brands = Brand::all();
         return View('panel-admin.add-brand', compact('brands'));
     }
     public function store(Request $request)
@@ -31,7 +32,7 @@ class BrandController extends Controller
         ]);
         return redirect(route('brands.index'))->with('alert', 'برند شما با موفقیت افزوده شد');
     }
-   
+
 
     public function edit(Brand $brands)
     {
@@ -50,8 +51,9 @@ class BrandController extends Controller
 
         return view('brands.brands-list', compact("brands"));
     }
-    public function brandDescription(Brand $brand){
-        $details=detail::where('brand_id', $brand->id)->get();
+    public function brandDescription(Brand $brand)
+    {
+        $details = detail::where('brand_id', $brand->id)->get();
         return view('blog-details', compact('details'));
     }
     public function delete(Brand $brands)
@@ -59,6 +61,16 @@ class BrandController extends Controller
         $brand = Brand::find($brands->id);
         $brand->delete();
     }
-   
-   
+    public function addDetail(Brand $brand)
+    {
+        return view('panel-admin.add-detail',compact('brand'));
+    }
+    public function storeDetail(Request $request,Brand $brand){
+       detail::create([
+          'name' => $request->name,
+          'picture_url' => $request->picture_url,
+          'forward_url' => $request->forward_url,
+          'brand_id' => $brand->id,
+       ]);
+    }
 }
