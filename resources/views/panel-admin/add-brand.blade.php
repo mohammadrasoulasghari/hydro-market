@@ -550,7 +550,7 @@
                                         <h4 class="box-title">افزودن برند جدید</h4>
                                     
                                     </div>
-                                    <form action="{{ route('brands.store') }}" method="POST">
+                                    <form action="{{ route('brands.store') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                     <div class="box-body">
                                         <div class="row">
@@ -563,7 +563,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group mb-0">
                                                     <div class="form-line">
-                                                        <textarea rows="4" name="picture_url" class="form-control no-resize" placeholder="آدرس عکس برند"></textarea>
+                                                        <input rows="4" name="picture_url" type="file" class="form-control no-resize" placeholder="آدرس عکس برند">
                                                     </div>
                                                 </div>
                                             </div>

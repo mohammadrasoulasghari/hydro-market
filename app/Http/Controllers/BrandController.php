@@ -6,11 +6,12 @@ use App\Models\Brand;
 use App\Models\detail;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BrandController extends Controller
 {
     public function index()
-    {
+    { 
         $brands = Brand::all();
         return View('index', compact('brands'));
     }
@@ -26,9 +27,10 @@ class BrandController extends Controller
     }
     public function store(Request $request)
     {
+        $path=Storage::putFile('', $request->picture_url);
         Brand::create([
             'name' => $request->name,
-            'picture_url' => $request->picture_url,
+            'picture_url' => $path
         ]);
         return redirect(route('brands.index'))->with('alert', 'برند شما با موفقیت افزوده شد');
     }
@@ -36,7 +38,7 @@ class BrandController extends Controller
 
     public function edit(Brand $brands)
     {
-
+       
         return View('brands.edit-brand', compact('brands'));
     }
 
@@ -73,4 +75,5 @@ class BrandController extends Controller
           'brand_id' => $brand->id,
        ]);
     }
+    
 }
