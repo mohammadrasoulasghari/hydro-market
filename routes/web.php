@@ -21,6 +21,7 @@ Route::get('/', [BrandController::class, 'index'])->name('brands.index');
 Route::get('/edit/{brands}/brand', [BrandController::class, 'edit'],)->name('brands.edit');
 Route::post('/edit/{brands}', [BrandController::class, 'update'],)->name('brands.update');
 
+Route::get('/delete', [BrandController::class, 'showDeletePage'],)->name('delete.show');
 Route::get('/delete/{brands}', [BrandController::class, 'delete'],)->name('brands.delete');
 
 Route::get('brands/show', [BrandController::class, 'brandList']);
@@ -28,9 +29,10 @@ Route::get('b', function () {
     
     return view('panel-admin.add-detail');
 });
-
-
 Route::get('show/{brand}', [BrandController::class, 'brandDescription'])->name('brand.detail');
+
+
+Route::get('add-detail/', [BrandController::class, 'addDetailPage'])->name('add.detail.page');
 Route::get('add-detail/{brand}', [BrandController::class, 'addDetail'])->name('add.detail');
 Route::post('create-detail/{brand}', [BrandController::class, 'storeDetail'])->name('detail.store');
 

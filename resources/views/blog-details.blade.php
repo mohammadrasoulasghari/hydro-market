@@ -268,7 +268,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="single-blog">
                                 <div class="blog-img">
-                                    <a href="{{ $detail->forward_url }}"><img src="{{ $detail->picture_url }}" alt=""></a>
+                                    <a href="{{ $detail->forward_url }}"><img src="{{ asset('brand/' . $detail->picture_url) }}" alt=""></a>
                                 </div>
                             <div class="blog-tent">
                                     <div class="blog-meta">

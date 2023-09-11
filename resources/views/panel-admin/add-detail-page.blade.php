@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-https: //t.me/sabzrea ->
 
     <!-- Mirrored from www.fudademo.ir/fudapanel/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 13:27:54 GMT -->
 
@@ -98,7 +98,7 @@
                 <div class="pull-right d-none d-sm-inline-block">
                     <ul
                         class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-                        
+                       
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0)">پرسش ها</a>
                             </li>
@@ -110,7 +110,7 @@
                 &copy; 2023 <a href="https://fudatco.com/">قالب های چند منظوره</a>. کپی رایت محفوظ است.
             </footer>
 
-           
+
 
             <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
             <div class="control-sidebar-bg"></div>
@@ -125,21 +125,21 @@
 
 
         <!-- Vendor JS -->
-        <script src="{{ asset('assets/js/vendors.min.js') }}"></script>
-        <script src="{{ asset('assets/js/pages/chat-popup.js') }}"></script>
-        <script src="{{ asset('assets/icons/feather-icons/feather.min.js') }}"></script>
-        <script src="{{ asset('assets/js/charts/sparkline.js') }}"></script>
-            <script src="{{ asset('assets/js/charts/jquery.sparkline.min.js') }}"></script>
+        <script src="assets/js/vendors.min.js"></script>
+        <script src="assets/js/pages/chat-popup.js"></script>
+        <script src="assets/icons/feather-icons/feather.min.js"></script><!-https: //t.me/sabzrea ->
+        <script src="assets/js/charts/sparkline.js"></script>
+            <script src="assets/js/charts/jquery.sparkline.min.js"></script>
 
             <!-- Master Admin App -->
-            <script src="{{ asset('assets/js/template.js') }}"></script>
-            <script src="{{ asset('assets/js/charts/apexcharts.min.js') }}"></script>
-            <script src="{{ asset('assets/js/charts/apexcharts-light-rtl.js') }}"></script>
-                <script src="{{ asset('assets/js/charts/app.js') }}"></script>
+            <script src="assets/js/template.js"></script>
+            <script src="assets/js/charts/apexcharts.min.js"></script>
+            <script src="assets/js/charts/apexcharts-light-rtl.js"></script><!-https: //t.me/sabzrea ->
+                <script src="assets/js/charts/app.js"></script>
 
     </body>
 
 
-
+    <!-- Mirrored from www.fudademo.ir/fudapanel/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 13:28:14 GMT -->
 
 </html>

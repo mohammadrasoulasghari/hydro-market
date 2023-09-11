@@ -32,7 +32,7 @@ class BrandController extends Controller
             'name' => $request->name,
             'picture_url' => $path
         ]);
-        return redirect(route('brands.index'))->with('alert', 'برند شما با موفقیت افزوده شد');
+        return redirect(route('panel.show'))->with('alert', 'برند شما با موفقیت افزوده شد');
     }
 
 
@@ -58,19 +58,34 @@ class BrandController extends Controller
         $details = detail::where('brand_id', $brand->id)->get();
         return view('blog-details', compact('details'));
     }
+    public function showDeletePage()
+    {
+        $brands = Brand::all();
+        return view('panel-admin.delete-brand',compact('brands'));
+    }
     public function delete(Brand $brands)
     {
         $brand = Brand::find($brands->id);
         $brand->delete();
+        return redirect()->route('delete.show')->with('alert', 'برند شما با موفقیت حذف شد');
+
+    }
+    public function addDetailPage()
+    {
+        $brands = Brand::all();
+        return view('panel-admin.add-detail-page',compact('brands'));
     }
     public function addDetail(Brand $brand)
     {
         return view('panel-admin.add-detail',compact('brand'));
+        return redirect()->route('add.detail')->with('alert', 'برند شما با موفقیت حذف شد');
+
     }
     public function storeDetail(Request $request,Brand $brand){
+        $path=Storage::putFile('', $request->picture_url);
        detail::create([
           'name' => $request->name,
-          'picture_url' => $request->picture_url,
+          'picture_url' => $path,
           'forward_url' => $request->forward_url,
           'brand_id' => $brand->id,
        ]);
