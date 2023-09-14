@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="zxx">
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<html>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" >
 <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -27,10 +27,6 @@
     </head>
 
     <body data-spy="scroll" data-offset="70">
-       
-       <!--====== PRELOADER PART START ======-->
-
-    
 
     <!--====== PRELOADER PART ENDS ======-->
 <x-alert>
@@ -87,22 +83,9 @@
         </div>
         <!-- End Features Area -->
 
+        @vite('resources/js/app.js')
         
-        
-        <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
-        <script src="{{ asset('assets/js/vendor/modernizr-3.11.2.min.js') }}"></script>
-    
-        <!-- Bootstrap JS -->
-        <script src="{{ asset('assets/js/plugins/popper.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}"></script>
-    
-        <!-- Plugins JS -->
-        <script src="{{ asset('assets/js/plugins/swiper-bundle.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/aos.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/jquery.magnific-popup.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/jquery.counterup.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/appear.min.js') }}"></script>
-        <script src="{{ asset('assets/js/plugins/waypoints.min.js') }}"></script>
+
     
     
         <!-- Main JS -->
